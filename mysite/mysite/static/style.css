@@ -1,0 +1,34 @@
+body{
+    width: 100%;
+    margin: 0;
+}
+.card-body a   {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.container-fluid table td a{
+    text-decoration: none;
+    color: black;
+}
+#job-qualification h2  {
+    text-align: center;
+}
+.card i {
+    color: #3B61AD;
+}
+/*.navbar {*/
+/*    background-color: #FF7207;*/
+/*}*/
+hr  {
+    background-color: #FF7207;
+}
+.page-footer{
+    position: relative;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    color: white;
+    background-color: black;
+}

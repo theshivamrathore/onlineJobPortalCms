@@ -1,0 +1,843 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <table class="table-navigation table table-bordered">
+      <tbody>
+      <tr>
+          <td><a href="#bankTable">Bank</a></td>
+          <td><a href="#otherGovtTable">Other Govt Finance</a></td>
+          <td><a href="#upscTable">UPSC</a></td>
+          <td><a href="#sscTable">SSC</a></td>
+          <td><a href="#otherAllTable">Other All India</a></td>
+          <td><a href="#"></a></td>
+          <td><a href="#defenceTable">Defence</a></td>
+          <td><a href="#railwayTable">Railways</a></td>
+          <td><a href="#medicalTable">Medical Jobs</a></td>
+      </tr>
+              <tr>
+          <td><a href="#a&nTable">Andman And Nicobar</a></td>
+          <td><a href="#apTable">Andhra Pradesh</a></td>
+          <td><a href="#arpTable">Arunachal Pradesh</a></td>
+          <td><a href="#assamTable">Assam</a></td>
+          <td><a href="#biharTable">Bihar</a></td>
+          <td><a href="#chandigharTable">Chandighar</a></td>
+          <td><a href="#chhattisgarhTable">Chhattisgarh</a></td>
+          <td><a href="#d&nhavelliTable">Dadar & Nagar Haveli</a></td>
+          <td><a href="#d&dTable">Daman & Diu</a></td>
+      </tr>
+              <tr>
+          <td><a href="#delhiTable">Delhi</a></td>
+          <td><a href="#goaTable">Goa</a></td>
+          <td><a href="#gujratTable">Gujarat</a></td>
+          <td><a href="#haryanaTable">Haryana</a></td>
+          <td><a href="#hpTable">Himachal Pradesh</a></td>
+          <td><a href="#j&ktable">J & K</a></td>
+          <td><a href="#jharkhandTable">Jharkhand</a></td>
+          <td><a href="#karnatakaTable">Karnataka</a></td>
+          <td><a href="#keralaTable">Kerala</a></td>
+      </tr>
+              <tr>
+          <td><a href="#lakshadweepTable">Lakshadweep</a></td>
+          <td><a href="#mpTable">Madhya Pradesh</a></td>
+          <td><a href="#maharashtraTable">Maharashtra</a></td>
+          <td><a href="#manipurTable">Manipur</a></td>
+          <td><a href="#meghalayaTable">Meghalaya</a></td>
+          <td><a href="#mizoramTable">Mizoram</a></td>
+          <td><a href="#nagalandTable">Nagaland</a></td>
+          <td><a href="#odishaTable">Odisha</a></td>
+          <td><a href="#pondicherryTable">Pondicherry</a></td>
+      </tr>
+              <tr>
+          <td><a href="#punjabTable">Punjab</a></td>
+          <td><a href="#rajasthanTable">Rajasthan</a></td>
+          <td><a href="#sikkimTable">Sikkim</a></td>
+          <td><a href="#tnTable">Tamil Nadu</a></td>
+          <td><a href="#tsTable">Telengana</a></td>
+          <td><a href="#tripuraTable">Tripura</a></td>
+          <td><a href="#uttarakhandTable">uttarakhand</a></td>
+          <td><a href="#upTable">Uttar Pradesh</a></td>
+          <td><a href="#wbTable">West Bengal</a></td>
+      </tr>
+      </tbody>
+  </table>
+</div>
+<!--- Bank Job Table Starts ------>
+<div class="container">
+  <h2>{% placeholder 'heading'%}</h2>
+  <table class="table table-bordered table-data" id="bankTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Bank Name</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in bank_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.bank_name }}</td>
+              <td><strong>Post Name :</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification :</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No. :</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link btn"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Bank Job Table Ends ------>
+
+<!--- Other Govt Financial Institute Job Table Starts ------>
+<div class="container">
+  <h2>{% placeholder 'heading1'%}</h2>
+  <table class="table table-bordered table-data" id="otherGovtTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in othetfin_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- other Govt Financial Institute Job Table Ends ------>
+
+<!--- Upsc Job Table Starts ------>
+<div class="container">
+  <h2>UPSC</h2>
+  <table class="table table-bordered table-data" id="upscTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Exam / Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in upsc_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.exam_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Upsc Table Ends ------>
+
+<!--- Ssc Job Table Starts ------>
+<div class="container">
+  <h2>SSC</h2>
+  <table class="table table-bordered table-data" id="sscTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Exam / Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in ssc_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.exam_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Ssc Table Ends ------>
+
+<!--- Other All India Exam Job Table Starts ------>
+<div class="container">
+  <h2>Other All India Exams</h2>
+  <table class="table table-bordered table-data myTable" id="otherAllTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in othetAllIndia_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last date :</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Other All India Exams Job Table Ends ------>
+
+<!--- Defence Job Table Starts ------>
+<div class="container">
+  <h2>Defence Jobs</h2>
+  <table class="table table-bordered table-data myTable" id="defenceTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in defence_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Defence Job Table Ends ------>
+
+<!--- Railway Job Table Starts ------>
+<div class="container">
+  <h2>Railway</h2>
+  <table class="table table-bordered table-data" id="railwayTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in railways_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Railway Job Table Ends ------>
+
+<!--- Andaman and Nicobar Islands Job Table Starts ------>
+<div class="container">
+  <h2>Andaman and Nicobar Islands</h2>
+  <table class="table table-bordered table-data" id="a&nTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in andaman_nicobar_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Andaman and Nicobar Islands Job Table Ends ------>
+
+<!--- Arunachal Pradesh Job Table Starts ------>
+<div class="container">
+  <h2>Arunachal Pradesh</h2>
+  <table class="table table-bordered table-data" id="arpTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in arunachal_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt no.: </strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Arunachal Pradesh Job Table Ends ------>
+
+<!--- Assam Job Table Starts ------>
+<div class="container">
+  <h2>Assam</h2>
+  <table class="table table-bordered table-data" id="assamTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in assam_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Assam Job Table Ends ------>
+
+<!--- Bihar Job Table Starts ------>
+<div class="container">
+  <h2>Bihar</h2>
+  <table class="table table-bordered table-data" id="biharTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in bihar_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Bihar Job Table Ends ------>
+
+<!--- Chhattishgarh Job Table Starts ------>
+<div class="container">
+  <h2>Chhattishgarh</h2>
+  <table class="table table-bordered table-data" id="chhattisgarhTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in chhattisgarh_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td> <strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Chhattishgarh Job Table Ends ------>
+
+<!--- Delhi Job Table Starts ------>
+<div class="container">
+  <h2>Delhi</h2>
+  <table class="table table-bordered table-data" id="delhiTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in delhi_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Delhi Job Table Ends ------>
+
+<!--- Gujrat Job Table Starts ------>
+<div class="container">
+  <h2>Gujrat</h2>
+  <table class="table table-bordered table-data" id="gujratTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in gujrat_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Gujrat Job Table Ends ------>
+
+<!--- Haryana Job Table Starts ------>
+<div class="container">
+  <h2>Haryana</h2>
+  <table class="table table-bordered table-data" id="haryanaTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in haryana_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Haryana Job Table Ends ------>
+
+<!--- Himachal Pradesh Job Table Starts ------>
+<div class="container">
+  <h2>Himachal Pradesh</h2>
+  <table class="table table-bordered table-data" id="hpTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in haryana_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt no.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Himachal Pradesh Job Table Ends ------>
+
+<!--- Karnataka Job Table Starts ------>
+<div class="container">
+  <h2>Karnataka</h2>
+  <table class="table table-bordered table-data" id="karnatakaTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in haryana_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Karnataka Job Table Ends ------>
+
+<!--- Kerala Job Table Starts ------>
+<div class="container">
+  <h2>Kerala</h2>
+  <table class="table table-bordered table-data" id="keralaTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in kerala_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Kerala Job Table Ends ------>
+
+<!--- Maharashtra Job Table Starts ------>
+<div class="container">
+  <h2>Maharashtra</h2>
+  <table class="table table-bordered table-data" id="maharashtraTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in maharashtra_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Maharashtra Job Table Ends ------>
+
+<!--- Odisha Job Table Starts ------>
+<div class="container">
+  <h2>Odisha</h2>
+  <table class="table table-bordered table-data" id="odishaTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in odisha_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Odisha Job Table Ends ------>
+
+<!--- Punjab Job Table Starts ------>
+<div class="container">
+  <h2>Punjab</h2>
+  <table class="table table-bordered table-data" id="punjabTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in punjab_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Punjab Job Table Ends ------>
+
+<!--- Rajasthan Job Table Starts ------>
+<div class="container">
+  <h2>Rajasthan</h2>
+  <table class="table table-bordered table-data" id="rajasthanTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in rajasthan_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Rajasthan Job Table Ends ------>
+
+<!--- Tamil Nadu Job Table Starts ------>
+<div class="container">
+  <h2>Tamil Nadu</h2>
+  <table class="table table-bordered table-data myTable" id="tnTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in tamil_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Tamil Nadu Job Table Ends ------>
+
+<!--- Uttar Pradesh Job Table Starts ------>
+<div class="container">
+  <h2>Uttar Pradesh</h2>
+  <table class="table table-bordered table-data" id="upTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in uttarPradesh_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Uttar Pradesh Job Table Ends ------>
+
+<!--- West Bangal Job Table Starts ------>
+<div class="container">
+  <h2>West Bangal</h2>
+  <table class="table table-bordered table-data myTable" id="wbTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in westBangal_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- West Bangal Job Table Ends ------>
+
+<!--- Medical/Hospital Job Table Starts ------>
+<div class="container">
+  <h2>Medical/Hospital</h2>
+  <table class="table table-bordered table-data myTable" id="medicalTable">
+      <thead>
+      <th>Post Date</th>
+      <th>Recruitment Board</th>
+      <th>Post Name</th>
+      <th>Qualification</th>
+      <th>Advt No.</th>
+      <th>Last Date</th>
+      <th>More Information</th>
+      </thead>
+      <tbody>
+      {% for data in medical_data %}
+          <tr>
+              <td class="hide">{{ data.post_date }}</td>
+              <td class="head">{{ data.recruitment_board }}</td>
+              <td><strong>Post Name:</strong>{{ data.post_name }}</td>
+              <td><strong>Qualification:</strong>{{ data.qualification }}</td>
+              <td><strong>Advt No.:</strong>{{ data.advt_no }}</td>
+              <td><strong>Last Date:</strong>{{ data.last_date }}</td>
+              <td class="link"><a href="#">Get Details..</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+<!--- Medical/Hospital Job Table Ends ------>
+{% endblock content %}

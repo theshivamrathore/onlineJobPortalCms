@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load cms_tags  %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+<div class="container">
+{% block content %}
+<div class="container heading">
+<h1>{%placeholder 'main-heading%}</h1>
+<p>{%placeholder 'paragraph-content'%}</p>
+</div>
+<div class="container">
+  <h2>Education Wise Govt Jobs</h2>
+  <table class="table table-bordered table-striped">
+      <tr>
+          <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">10th Pass Govt Jobs</a></td>
+          <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">12th Pass Govt Jobs</a></td>
+      </tr>
+      <tr>
+          <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Degree Govt Jobs</a></td>
+          <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Pg Govt Jobs</a></td>
+      </tr>
+      <tr>
+          <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Engineering Govt Jobs</a></td>
+          <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Nursing Govt Jobs</a></td>
+      </tr>
+      <tr>
+          <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Diploma Govt Jobs</a></td>
+          <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">ITI Pass Govt Jobs</a></td>
+      </tr>
+  </table>
+</div>
+
+<div class="container">
+  <h2>List Of Latest Govt Jobs</h2>
+  <table class="table table-bordered table-data" id="myTable">
+      <thead>
+      <th>Company</th>
+      <th>Post Name(s)</th>
+      <th>Education</th>
+      <th>Total Posts</th>
+      <th>Location</th>
+      <th>Last Date</th>
+      <th>Apply Onine</th>
+      </thead>
+      <tbody>
+      {% for rdata in railway_data %}
+          <tr>
+              <td id="td1">{{ rdata.company }}</td>
+              <td><strong>Post Name(s):&nbsp;</strong>{{ rdata.post_name }}</td>
+              <td><strong>Education:&nbsp;</strong>{{ rdata.education }}</td>
+              <td><strong>Total Posts:&nbsp;</strong>{{ rdata.total_post }}</td>
+              <td><strong>Location:&nbsp;</strong>{{ rdata.location }}</td>
+              <td><strong>Last Date:&nbsp;</strong>{{ rdata.last_date }}</td>
+              <td id="td7"><a href="#" class="btn">Apply Online</a></td>
+          </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <h2>Top Trending Jobs</h2>
+  <table class="table table-striped table-bordered">
+      <tr>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Central Govt Jobs</a></td>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Latest Govt Jobs</a></td>
+      </tr>
+      <tr>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Railway Jobs</a></td>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">SSC Jobs</a></td>
+      </tr>
+      <tr>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Indian Army Jobs</a></td>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Indian Navy Jobs</a></td>
+      </tr>
+      <tr>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Indian AirForce Jobs</a></td>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Police Jobs</a></td>
+      </tr>
+      <tr>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Daily Employment News</a></td>
+      <td><i class="fa fa-star" aria-hidden="true"></i><a href="#">Free Job Alert</a></td>
+      </tr>
+  </table>
+</div>
+<div class="container">
+  <h2>{%placeholder 'sub-heading-1'%}</h2>
+  <p>{% placeholder 'paragraph-content-1'%}</p>
+</div>
+<div class="container">
+  <h2>{%placeholder 'sub-heading-2'%}</h2>
+  <p>{% placeholder 'paragraph-content-2'%}</p>
+</div>
+<div class="container">
+  <h2>{%placeholder 'sub-heading-and-details-3'%}</h2>
+</div>
+<div class="container">
+  <table class="table table-striped table-bordered text-center">
+      <tr>
+          <td colspan="2">Location-Wise RRB’s</td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Ahmedabad</a></td>
+          <td><a href="#">RRB Ajmer</a></td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Allahabad</a></td>
+          <td><a href="#">RRB Banglore</a></td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Bhopla</a></td>
+          <td><a href="#">RRB Bhubaneshwar</a></td>
+      </tr>
+      <tr>
+      <td><a href="#">RRB Bilaspur</a></td>
+      <td><a href="#">RRB Chandigarh</a></td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Chennai</a></td>
+          <td><a href="#">RRB Gorakhpur</a></td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Guwahati</a></td>
+          <td><a href="#">RRB Jammu</a></td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Kolkata</a></td>
+          <td><a href="#">RRB Malda</a></td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Mumbai</a></td>
+          <td><a href="#">RRB Muzaffarpur</a></td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Patna</a></td>
+          <td><a href="#">RRB Ranchi</a></td>
+      </tr>
+      <tr>
+          <td><a href="#">RRB Secundrabad</a></td>
+          <td><a href="#">RRB Siliguri</a></td>
+      </tr>
+      <tr>
+          <td colspan="2"><a href="#">RRB Trivandrum</a></td>
+      </tr>
+  </table>
+</div>
+<div class="container">
+  <h2>{%placeholder 'sub-heading-and-details-4'%}</h2>
+</div>
+<div class="container">
+  <h2>{%placeholder 'sub-heading-details-5'%}</h2>
+</div>
+{% endblock content %}
+</div>
